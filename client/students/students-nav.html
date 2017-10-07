@@ -1,0 +1,24 @@
+<a class="btn" ui-sref="studentInfo.newStudent">New Student </a>
+<h3>Search All Students</h3>
+<table class="table">
+  <thead> 
+     <th>Enrollement No.
+     <input class="form-input " type="text" ng-model="tst" placeholder="Search by Enrollment Number.." size="25"></th>
+    <th>Roll_No.
+    <input class="form-input" type="text" ng-model="tst1" placeholder="Search By Roll No..."></th>
+    <th>Student Name
+  <input class="form-input" type="text" ng-model="tst2" placeholder="Search By Name...">
+    </th>
+    <th>Marks</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="student in studentsCtrl.students | filter:{enrl_no: tst, roll_no: tst1 ,name: tst2} | limitTo : 3">
+      <td>{{student.enrl_no}}</td>
+      <td>{{student.roll_no}}</td>
+      <td>{{student.name}}</td>
+      <td><a ui-sref="studentInfo.marks({ studentEnroll : student.enrl_no })">Marks</a></td>
+    </tr>
+  </tbody>
+</table>
+<div ui-view>
+</div>

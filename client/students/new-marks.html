@@ -1,0 +1,39 @@
+<form class="form" name="newMarksForm" ng-submit="newMarksCtrl.saveMarks(marks)"/>
+
+  <h3 class="mbm">New Marks for {{newMarksCtrl.marksEnroll}}</h3>
+  <div class="form-field">
+    <label class="form-label" for="subject">Subject:</label>
+    <select class="form-select" id="subject" required ng-model="marks.subject">
+      <option value="Social Science">Social Science</option>
+      <option value="English Literature">English Literature</option>
+      <option value="English Language">English Language</option>
+      <option value="Hindi Literature">Hindi Literature</option>
+      <option value="Hindi Language">Hindi Language</option>
+      <option value="Maths">Maths</option>
+      <option value="Science">Science</option>
+      <option value="Computer">Computer</option>
+      <option value="Moral Science">Moral Science</option>
+      <option value="G.K">G.K</option>
+      <option value="Arts / Crafts">Arts / Crafts</option>
+      <option value="Sanskrit">Sanskrit</option>
+      <option value="Holiday H.W.">Holiday H.W.</option>
+    </select>
+  </div>
+  
+
+  <div class="form-field">
+    <label class="form-label" for="min">Actual Marks</label>
+    <input class="form-input" id="min" required ng-model="marks.min"/>
+  </div>
+
+  <div class="form-field">
+    <label class="form-label" for="max">Max Marks</label>
+    <input class="form-input" id="max" required ng-model="marks.max"/>
+  </div>
+
+
+
+  <input class="btn" type="submit" value="Submit" />
+
+</form>
+</form>

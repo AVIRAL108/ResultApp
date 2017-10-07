@@ -1,0 +1,51 @@
+[
+  {
+    "enrl_no" : "12PRS008",
+    "roll_no" : "10",
+    "name" : "Aviral",
+    "fname":"Brij Kishore Garg",
+    "mname": "Vandna Garg",
+    "mobile": "9897635524",
+    "dob" : "8829424620",
+    "address": "19, sai dham colony, yamuna, vihar, kmala nagar, agara",
+    "class": "I",
+    "doa" : "3464364634", 
+    "marks" : [
+        {
+            "subject" : "Social Science",
+            "min" : "80",
+            "max" : "100"
+        },
+        {
+            "subject" : "Hindi",
+            "min" : "67",
+            "max" : "100"
+        }
+    ]
+ },
+ {
+    "enrl_no" : "12PRS009",
+    "roll_no" : "12",
+    "name" : "Pankaj",
+    "fname":"Ramesh Jain",
+    "mname": "Simran Devi Jain",
+    "mobile": "9897635524",
+    "dob" : "8829424620",
+    "address": "19, New Agra, Dayalbagh, Agra",
+    "class": "III",
+    "doa" : "3464364634",
+      "marks" : [
+        {
+            "subject" : "Social Science",
+            "min" : "80",
+            "max" : "100"
+        },
+        {
+            "subject" : "Hindi",
+            "min" : "67",
+            "max" : "100"
+        }
+    ]
+ }
+
+]

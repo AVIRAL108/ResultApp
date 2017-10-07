@@ -1,0 +1,18 @@
+<h3>Marks of Student -{{ marksCtrl.mark.name  + " En_ID" + "-"+ "("+marksCtrl.mark.enrl_no +")" }}
+
+<table class="table">
+  <thead>
+    <th>Subject</th>
+    <th>Min Marks</th>
+    <th>Max Marks</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="mark in marksCtrl.mark.marks">
+      <td>{{mark.subject}}</td>
+      <td>{{mark.min}}</td>
+      <td>{{mark.max}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<a class="btn" ui-sref="studentInfo.new({ studentEnroll : marksCtrl.mark.enrl_no})">New Marks</a>

@@ -1,0 +1,58 @@
+<h3>Enter Details of New Student</h3>
+<form class="form" name="newStudentForm" ng-submit="newStudentCtrl.saveStudent(student)"/>
+
+  <h3 class="mbm">New Student for School</h3>
+
+  <div class="form-field">
+    <label class="form-label" for="enrl_no">Enrollment No.:</label>
+    <input class="form-input" id="enrl_no" required ng-model="student.enrl_no"/>
+  </div>
+
+  <div class="form-field">
+    <label class="form-label" for="roll_no">Roll No :</label>
+    <input class="form-input" id="roll_no" required ng-model="student.roll_no"/>
+  </div>
+   <div class="form-field">
+    <label class="form-label" for="name">Student Name</label>
+    <input class="form-input" id="name" required ng-model="student.name"/>
+  </div>
+   <div class="form-field">
+    <label class="form-label" for="fname">Father's Name</label>
+    <input class="form-input" id="fname" required ng-model="student.fname"/>
+  </div>
+    <div class="form-field">
+    <label class="form-label" for="mname">Mother's Name</label>
+    <input class="form-input" id="mname" required ng-model="student.mname"/>
+  </div>
+
+      <div class="form-field">
+    <label class="form-label" for="dob">Date of Birth</label>
+    <input class="form-input" id="dob" required ng-model="student.dob"/>
+  </div>
+  <div class="form-field">
+    <label class="form-label" for="mobile">Mobile Number</label>
+    <input class="form-input" id="mobile" required ng-model="student.mobile"/>
+  </div>
+   <div class="form-field">
+    <label class="form-label" for="address">Address</label>
+    <input class="form-input" id="address" required ng-model="student.address"/>
+  </div>
+  <div class="form-field">
+    <label class="form-label" for="class">Class:</label>
+    <select class="form-select" id="class" required ng-model="student.class">
+      <option value="I">I</option>
+      <option value="II">II</option>
+         <option value="III">III</option>
+      <option value="IV">IV</option>
+      <option value="V">V</option>
+    </select>
+  </div>
+   <div class="form-field">
+    <label class="form-label" for="doa">Date of Admission</label>
+    <input class="form-input" id="doa" required ng-model="student.doa"/>
+  </div>
+
+
+  <input class="btn" type="submit" value="Submit" />
+{{student}}
+</form>
