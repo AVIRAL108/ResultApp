@@ -10,7 +10,7 @@ let bodyParser = require("body-parser");
 let jsonParser = bodyParser.json();
 
 app.use( express.static(__dirname + "/../client") );
-
+app.use( express.static(__dirname + "/../node_modules") );
 app.get('/studentInfo', (request, response)=>{
   let students = mongoUtil.students();
   students.find().toArray( (err, docs) => {
@@ -45,7 +45,7 @@ app.post('/studentInfo/:enrl_no/marks', jsonParser, (request, response) =>{
 });
 app.post('/studentInfo/new-student', jsonParser, (request, response) =>{
 	let students = mongoUtil.students();
-	let newStudent = request.body.student|| {};
+	let newStudent = request.body.student || {};
         students.insert(newStudent, (err, doc) => {
             if(err){
               response.sendStatus(400);

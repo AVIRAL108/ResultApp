@@ -1,6 +1,7 @@
 import angular from 'angular'
 import 'angular-ui-router'
-angular.module('studentApp', ["ui.router"])
+import 'pdfmake'
+angular.module('studentApp', ["ui.router","pdfmake"])
 
 .config(($stateProvider, $urlRouterProvider) => {
   $urlRouterProvider.otherwise('/studentInfo')
@@ -29,6 +30,9 @@ angular.module('studentApp', ["ui.router"])
                        },
                     controller: function(markService){
                             this.mark = markService.data;
+                            this.savePdf = function(){
+                              pdfMake.createPdf({ content: 'This is an sample PDF printed with pdfMake' }).download('optionalName.pdf');
+                            };
                                },
                     controllerAs: 'marksCtrl'
             })
@@ -51,8 +55,7 @@ angular.module('studentApp', ["ui.router"])
         templateUrl: 'students/new-student.html',
         controller : function($stateParams, $state, $http){
             this.saveStudent = function(student){
-                        $http({method: 'POST', url: `/studentInfo/new-student`, data: {student} }).then(function(response){
-                        this.students.push(response.data);
+                        $http({method: 'POST', url: `/studentInfo/new-student`, data:{student}}).then(function(){
                         $state.go('studentInfo');
                 });
                
